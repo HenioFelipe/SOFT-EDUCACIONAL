@@ -7,7 +7,7 @@
 #include <windows.h>  //para usar o Sleep()
 #define TAM 20
 
-// Estrutura que cria a ficha do jogo e declaração das variáveis
+// Estrutura que cria a ficha do jogo e declaraÃ§Ã£o das variÃ¡veis
 
 struct ficha_resposta {
 	char v_nome[TAM]; 
@@ -19,7 +19,7 @@ struct ficha_resposta {
 	char v_profissao[TAM];
 };
 
-// Criação da resposta do tipo ficha_resposta 
+// CriaÃ§Ã£o da resposta do tipo ficha_resposta 
 
 struct ficha_resposta resposta[10];
 
@@ -33,25 +33,25 @@ void inicializacao () {
 
 void intrucoes() {
     printf ("=========================================================================================================\n");
-    printf ("==                                             														==\n");
+    printf ("==                                             								==\n");
     printf ("==                                                                                             		==\n");
-    printf ("==                 INSTRUÇÕES DO JOGO ADEDONHA DIGITAL		                         					==\n");
-	printf ("== 																								==\n");
-    printf ("==   *  Para jogar, inicialmente você precisa informar a quantidade de participantes;       		==\n");
-    printf ("==   *  O programa sorteará a letra que os jogadores deverão preencher os itens da lista;    		==\n");
-	printf ("==   *  Cada jogador responderá sua lista, que possui as seguintes itens:                      		==\n");
+    printf ("==                 INSTRUÃ‡Ã•ES DO JOGO ADEDONHA DIGITAL		                         		==\n");
+    printf ("== 																								==\n");
+    printf ("==   *  Para jogar, inicialmente vocÃª precisa informar a quantidade de participantes;       		==\n");
+    printf ("==   *  O programa sortearÃ¡ a letra que os jogadores deverÃ£o preencher os itens da lista;    		==\n");
+    printf ("==   *  Cada jogador responderÃ¡ sua lista, que possui as seguintes itens:                      		==\n");
     printf ("==	    	|   NOME       |                                                                    	==\n");
-    printf ("== 	    |   PAIS       |                                                                   		==\n");
+    printf ("== 	|   PAIS       |                                                                   		==\n");
     printf ("==     	|   ANIMAL     |                                                                    		==\n");
     printf ("==     	|   OBJETO     |                                                                    		==\n");
     printf ("==     	|   FRUTA      |                                                                    		==\n");
     printf ("==     	|   COR        |                                                                    		==\n");
-    printf ("==     	|   PROFISSÃO  |                                                                    		==\n");
-    printf ("==   Pontuação:                                                                               		==\n");
+    printf ("==     	|   PROFISSÃƒO  |                                                                    		==\n");
+    printf ("==   PontuaÃ§Ã£o:                                                                               		==\n");
     printf ("==   -> Se dois ou mais jogadores responderem a mesma resposta para o mesmo item, receberam 5 pontos    ==\n");
-    printf ("==   -> Se responder o item sem repetição, receberá 10 pontos                                	    	==\n");
-    printf ("==   -> E caso não responda ao item solicitado, receberá pontuação 0 (zero).                   		==\n");
-    printf ("==   Pontuação máxima: 70 PONTOS                                                               		==\n");
+    printf ("==   -> Se responder o item sem repetiÃ§Ã£o, receberÃ¡ 10 pontos                                	    	==\n");
+    printf ("==   -> E caso nÃ£o responda ao item solicitado, receberÃ¡ pontuaÃ§Ã£o 0 (zero).                   		==\n");
+    printf ("==   PontuaÃ§Ã£o mÃ¡xima: 70 PONTOS                                                               		==\n");
     printf ("==                                                                                             		==\n");
     printf ("=========================================================================================================\n\n");
 }
@@ -67,7 +67,7 @@ void random_ (){
     printf ("Sorteando letra...\n\n");
     
     i = 1 + rand() % 27; 
-   /* printf ("Posição escolhida: %d\n", i); */
+   /* printf ("PosiÃ§Ã£o escolhida: %d\n", i); */
     
     letra_escolhida = letra[i];
     printf ("Letra escolhida: %c\n\n", letra_escolhida);
@@ -99,7 +99,7 @@ void jogo (int jogador){
     setlocale(LC_ALL,"Portuguese");
 	char Nome[TAM], Pais[TAM], Animal[TAM], Objeto[TAM], Fruta[TAM], Cor[TAM], Profissao[TAM];
     
-    printf("\nÉ a vez do jogador %d ! \n", jogador);
+    printf("\nÃ‰ a vez do jogador %d ! \n", jogador);
     printf("\nAgora preencha a tabela com suas respostas : \n\n");
     printf("|   ITEM       |   RESPOSTA   \n");
     printf("|   NOME       |   ");
@@ -114,7 +114,7 @@ void jogo (int jogador){
     scanf("%s", Fruta); 
     printf("|   COR        |   ");
     scanf("%s", Cor); 
-    printf("|   PROFISSÃO  |   ");
+    printf("|   PROFISSÃƒO  |   ");
     scanf("%s", Profissao); 
     
     strcpy(resposta[jogador].v_nome, Nome);
@@ -128,13 +128,13 @@ void jogo (int jogador){
     printf ("================================================================================\n\n");
 }
 
-void temporizador(){    // Procedimento ou função para controlar o tempo das jaogadas
+void temporizador(){    // Procedimento ou funÃ§Ã£o para controlar o tempo das jaogadas
 	setlocale(LC_ALL, "Portuguese");
     
-    //título do programa
-    SetConsoleTitle("Relógio");
+    //tÃ­tulo do programa
+    SetConsoleTitle("RelÃ³gio");
     
-    //variáveis
+    //variÃ¡veis
     int sec=0;//segundos
     int min=0;//minutos
     
@@ -143,7 +143,7 @@ void temporizador(){    // Procedimento ou função para controlar o tempo das jao
     do {
         system("cls");//limpa a tela
         
-        printf("\n\t\tRelógio\n");
+        printf("\n\t\tRelÃ³gio\n");
         
         printf("\n\t\t%dm : %ds\n\n", min, sec);
         
@@ -154,10 +154,10 @@ void temporizador(){    // Procedimento ou função para controlar o tempo das jao
 			break;
 		}
                 
-        Sleep(1000);//tem a função de pausar a execução por um determinado tempo
+        Sleep(1000);//tem a funÃ§Ã£o de pausar a execuÃ§Ã£o por um determinado tempo
         sec++;
         
-    }while (i==0);//condição para o loop infinito
+    }while (i==0);//condiÃ§Ã£o para o loop infinito
  
     system("pause");
 }
@@ -168,7 +168,7 @@ void respostas(int qt_jogadores){   // qt_jogadores --> representa a quantidade 
     printf ("\n\n================================================================================\n\n");
     printf ("\n\n             RESULTADO DO JOGO          \n\n");
     
-    // laço que imprime as respotas dos jogadores
+    // laÃ§o que imprime as respotas dos jogadores
     for (i=1; i<=qt_jogadores; i++){ 
         
         printf ("Respostas do jogador %d \n", i);
@@ -184,7 +184,7 @@ void respostas(int qt_jogadores){   // qt_jogadores --> representa a quantidade 
     }
 }
 
-// Procediemnto para validação dos resultados dos jogadores
+// Procediemnto para validaÃ§Ã£o dos resultados dos jogadores
 
 void validacao(int qt_jogadores){
     
@@ -198,7 +198,7 @@ void validacao(int qt_jogadores){
     int flag_cor = 0;
     int flag_profissao = 0;
     
-    /*Inicializando o array da pontuação*/
+    /*Inicializando o array da pontuaÃ§Ã£o*/
     
     for (i=0; i<=qt_jogadores; i++){
         pontuacao [i] = 0;
@@ -217,7 +217,7 @@ void validacao(int qt_jogadores){
         
         for (j=1; j<=qt_jogadores; j++){
             
-            if(i!=j){     /* Validção para não comparar a resposta do jogador com a propria resposta */
+            if(i!=j){     /* ValidÃ§Ã£o para nÃ£o comparar a resposta do jogador com a propria resposta */
                 if(strcmp(resposta[i].v_nome, "") == 0){
                     flag_nome = 1;
                 }
@@ -269,7 +269,7 @@ void validacao(int qt_jogadores){
             }
         }
         
-        /* Somatório da pontuação de cada jogador */
+        /* SomatÃ³rio da pontuaÃ§Ã£o de cada jogador */
         
 		switch (flag_nome) {
         case 0:
@@ -369,7 +369,7 @@ void validacao(int qt_jogadores){
             pontuacao [i] = pontuacao [i] + 0;
         }
         
-        printf ("PONTUACÃO DO JODADOR %d: %d pontos\n", i, pontuacao[i]);
+        printf ("PONTUACÃƒO DO JODADOR %d: %d pontos\n", i, pontuacao[i]);
     }
 }
 
@@ -384,23 +384,23 @@ int main() {
 	inicializacao();
 	
 	printf("        O que deseja fazer agora? \n\n");
-	printf("    Para iniciar uma partida, informe opção 1;\n");
-	printf("    Para ver as instruções do jogo, informe opção 2;\n");
-	printf("    Para finalizar o jogo, informe opção 3;\n\n");
-	printf("    Sua opção: ");
+	printf("    Para iniciar uma partida, informe opÃ§Ã£o 1;\n");
+	printf("    Para ver as instruÃ§Ãµes do jogo, informe opÃ§Ã£o 2;\n");
+	printf("    Para finalizar o jogo, informe opÃ§Ã£o 3;\n\n");
+	printf("    Sua opÃ§Ã£o: ");
 	v_opcao = 0;
 	scanf ("%d", &v_opcao);
 	
 	while(v_opcao != 3){
 	
     	if(v_opcao != 1 && v_opcao != 2 ){
-    	    printf("\n         Opcao inválida!\n\n");
+    	    printf("\n         Opcao invÃ¡lida!\n\n");
     	    
     	    printf("           O que deseja fazer agora? \n\n");
-	        printf("    Para iniciar uma partida, informe opção 1;\n");
-	        printf("    Para ver as instruções do jogo, informe opção 2;\n");
-	        printf("    Para finalizar o jogo, informe opção 3;\n\n");
-	        printf("    Sua opção: ");
+	        printf("    Para iniciar uma partida, informe opÃ§Ã£o 1;\n");
+	        printf("    Para ver as instruÃ§Ãµes do jogo, informe opÃ§Ã£o 2;\n");
+	        printf("    Para finalizar o jogo, informe opÃ§Ã£o 3;\n\n");
+	        printf("    Sua opÃ§Ã£o: ");
         	scanf ("%d", &v_opcao);
         	
     	}
@@ -410,10 +410,10 @@ int main() {
     	    intrucoes();
     	    
     	    printf("           O que deseja fazer agora? \n\n");
-	        printf("    Para iniciar uma partida, informe opção 1;\n");
-	        printf("    Para ver as instruções do jogo, informe opção 2;\n");
-	        printf("    Para finalizar o jogo, informe opção 3;\n\n");
-	        printf("    Sua opção: ");
+	        printf("    Para iniciar uma partida, informe opÃ§Ã£o 1;\n");
+	        printf("    Para ver as instruÃ§Ãµes do jogo, informe opÃ§Ã£o 2;\n");
+	        printf("    Para finalizar o jogo, informe opÃ§Ã£o 3;\n\n");
+	        printf("    Sua opÃ§Ã£o: ");
         	scanf ("%d", &v_opcao);
     	    
     	    printf ("================================================================================\n\n");
@@ -423,7 +423,7 @@ int main() {
     	    
         	printf("  Informe a quantidade de jogadores: ");
         	scanf ("%d", &qt_jogadores);
-        	printf("  Nesta rodada participarão %d jogadores!! \n\n", qt_jogadores);
+        	printf("  Nesta rodada participarÃ£o %d jogadores!! \n\n", qt_jogadores);
         	printf ("================================================================================\n\n");
         	
         	random_();
@@ -444,10 +444,10 @@ int main() {
         	start_estrutura();
         	
     	    printf("      		O que deseja fazer agora? \n\n");
-	        printf("    Para iniciar uma partida, informe opção 1;\n");
-	        printf("    Para ver as instruções do jogo, informe opção 2;\n");
-	        printf("    Para finalizar o jogo, informe opção 3;\n\n");
-	        printf("    Sua opção: ");
+	        printf("    Para iniciar uma partida, informe opÃ§Ã£o 1;\n");
+	        printf("    Para ver as instruÃ§Ãµes do jogo, informe opÃ§Ã£o 2;\n");
+	        printf("    Para finalizar o jogo, informe opÃ§Ã£o 3;\n\n");
+	        printf("    Sua opÃ§Ã£o: ");
         	scanf ("%d", &v_opcao); 
     	}
 	}
